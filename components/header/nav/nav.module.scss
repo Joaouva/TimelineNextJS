@@ -1,0 +1,17 @@
+.navbar {
+
+    ul {
+        display: flex;
+        align-items: center;
+        margin: 20px;
+        list-style: none;
+        text-align: right;
+
+        li > a {
+            text-decoration: none;
+            margin: 10px;
+            color: black;
+            font-weight: bold;
+        }
+    }
+}
