@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ApiService from "../../utils/api"
+import Link from "next/link";
 
 function CustomModal(props) {
   const { updateData, error } = ApiService();
@@ -27,27 +28,28 @@ function CustomModal(props) {
   };
 
   return (
-    <div>
-      <form>
-        <input placeholder={modalData.id} />
-        <input
-          type="text"
-          name="title"
-          placeholder={modalData.title}
-          onChange={(event) => setTitle(event.target.value)}
-        />
-        <input
-          type="text"
-          name="body"
-          placeholder={modalData.body}
-          onChange={(event) => setBody(event.target.value)}
-        />
-        <button disabled={!title + !body} onClick={updateItem}>
-          Submit
-        </button>
-        {error ? <div>{error}</div> : <div>{success}</div>}
-      </form>
-    </div>
+      <div>
+        <form>
+          <input placeholder={modalData.id} />
+          <input
+            type="text"
+            name="title"
+            placeholder={modalData.title}
+            onChange={(event) => setTitle(event.target.value)}
+          />
+          <input
+            type="text"
+            name="body"
+            placeholder={modalData.body}
+            onChange={(event) => setBody(event.target.value)}
+          />
+          <button disabled={!title + !body} onClick={updateItem}>
+            Submit
+          </button>
+          {error ? <div>{error}</div> : <div>{success}</div>}
+        </form>
+      </div>
+   
   );
 }
 

@@ -4,8 +4,6 @@ import styles from "./layout.module.scss";
 
 function Layout({ children, home, isLoggedIn, setIsLoggedIn }) {
 
-    console.log(isLoggedIn);
-    console.log(setIsLoggedIn);
   return (
     <div className={styles.container}>
       <Head>
